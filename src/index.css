@@ -1,13 +1,70 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* body {
+} */
+
+.menu_active {
+  font: bold;
+  border-bottom: 2px solid black;
+}
+.brand-name {
+  color: #006ecd;
+}
+.brand-heading {
+  max-width: 19ch;
+}
+.btn-get-started {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.8rem;
+  border: 1px solid #006ecd;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+}
+.btn-get-started:hover {
+  background-color: #2889df;
+  color: white;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.header-img img {
+  width: 100%;
+  animation: animate 2s ease-in-out infinite alternate;
+}
+
+i {
+  color: #006ecd;
+}
+#header {
+  height: 80vh;
+}
+@media screen and (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 500px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
+@keyframes animate {
+  0% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
 }
